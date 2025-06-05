@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import NewDocumentButton from "./NewDocumentButton";
 import {
@@ -8,8 +9,21 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { MenuIcon } from "lucide-react";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { useUser } from "@clerk/nextjs";
+import { collectionGroup, query, where } from "firebase/firestore";
+import { db } from "@/firebase";
 
 function Sidebar() {
+  const { user } = useUser();
+  const [data, loading, error] = useCollection(
+    user &&
+      query(
+        collectionGroup(db, "rooms"),
+        where("userId", "==", user.emailAddresses[0].toString())
+      )
+  );
+
   const menuOptions = (
     <>
       <NewDocumentButton />
