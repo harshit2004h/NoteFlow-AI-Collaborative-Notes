@@ -8,12 +8,12 @@ import {
 } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 
-import serviceKey from "./service_key.json";
+const serviceAccount = JSON.parse(process.env.GOOGLE_CREDENTIALS || "{}") as ServiceAccount;
 
 let app: App;
 if (getApps().length === 0) {
   app = initializeApp({
-    credential: cert(serviceKey as ServiceAccount),
+    credential: cert(serviceAccount),
   });
 } else {
   app = getApp();
