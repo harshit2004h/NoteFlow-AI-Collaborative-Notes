@@ -107,7 +107,7 @@ function Sidebar() {
 
       {/*Shared with me*/}
       {groupedData.editor.length > 0 && (
-        <>
+        <div className="flex py-4 flex-col space-y-4 w-36">
           <h2 className="text-gray-500 font-semibold text-sm">
             Shared with me
           </h2>
@@ -118,7 +118,7 @@ function Sidebar() {
               href={`/dashboard/doc/${doc.id}`}
             />
           ))}
-        </>
+        </div>
       )}
     </>
   );
