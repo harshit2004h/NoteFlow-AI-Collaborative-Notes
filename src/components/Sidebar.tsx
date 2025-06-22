@@ -84,7 +84,7 @@ function Sidebar() {
       <NewDocumentButton />
 
       {/*List Documents*/}
-      <div className="flex py-4 flex-col space-y-4 md:max-w-36">
+      <div className="flex py-4 flex-col space-y-4 w-36">
         {groupedData.owner.length === 0 ? (
           <h2 className="text-gray-500 font-semibold text-sm">
             No Documents found
@@ -95,7 +95,11 @@ function Sidebar() {
               My Documents
             </h2>
             {groupedData.owner.map((doc) => (
-              <SidebarOption key={doc.id} id={doc.id} href={`/dashboard/doc/${doc.id}`} />
+              <SidebarOption
+                key={doc.id}
+                id={doc.id}
+                href={`/dashboard/doc/${doc.id}`}
+              />
             ))}
           </>
         )}
@@ -108,19 +112,19 @@ function Sidebar() {
             Shared with me
           </h2>
           {groupedData.editor.map((doc) => (
-            <SidebarOption key={doc.id} id={doc.id} href={`/dashboard/doc/${doc.id}`} />
+            <SidebarOption
+              key={doc.id}
+              id={doc.id}
+              href={`/dashboard/doc/${doc.id}`}
+            />
           ))}
         </>
       )}
-
-
-
-
     </>
   );
 
   return (
-    <div className="p-2 md:p-5 bg-gray-200 relative">
+    <div className="p-2 md:p-5 bg-gray-200 relative ">
       <div className="md:hidden">
         {" "}
         <Sheet>
