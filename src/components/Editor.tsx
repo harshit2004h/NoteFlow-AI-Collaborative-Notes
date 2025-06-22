@@ -89,6 +89,7 @@ function Editor() {
     <div className="max-w-6xl mx-auto">
       <div className="flex items-center gap-2 justify-end mb-10">
         {/* TranslateDocument AI */}
+        <TranslateDocument doc={doc} />
         {/* ChatToDocument AI */}
 
         {/* DarkMode */}
