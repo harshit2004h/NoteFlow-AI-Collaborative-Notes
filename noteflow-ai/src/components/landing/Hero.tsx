@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Github, Play } from "lucide-react";
 import Link from "next/link";
 
 export const Hero = () => {
@@ -65,14 +65,16 @@ export const Hero = () => {
               </Button>
             </Link>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="px-8 py-4 text-lg rounded-xl border-2 border-gray-300 hover:border-purple-400 transition-all duration-300"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Watch demo
-            </Button>
+            <Link rel="noopener noreferrer" target="_blank" href="https://github.com/harshit2004h/NoteFlow-AI-Collaborative-Notes.git">
+              <Button
+                variant="outline"
+                size="lg"
+                className="px-8 py-4 text-lg rounded-xl border-2 border-gray-300 hover:border-purple-400 transition-all duration-300"
+              >
+                <Github className="mr-2 h-5 w-5 font-bold" />
+                Github Repo
+              </Button>
+            </Link>
           </div>
 
           {/* Social proof */}

@@ -41,10 +41,10 @@ export const Navbar = () => {
               Pricing
             </a>
             <a
-              href="#about"
+              href="#benefits"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
-              About
+              Benefits
             </a>
           </div>
 

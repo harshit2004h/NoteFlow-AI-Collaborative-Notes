@@ -36,7 +36,7 @@ const benefits = [
 
 export const Benefits = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="benefits" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Professional dark background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
@@ -92,14 +92,6 @@ export const Benefits = () => {
                 </div>
               ))}
             </div>
-
-            {/* Professional CTA */}
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-3.5 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:translate-y-[-1px]"
-            >
-              Start your free trial
-            </Button>
           </div>
 
           {/* Visual side */}

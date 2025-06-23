@@ -1,4 +1,5 @@
 import { FileText } from "lucide-react";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -7,12 +8,14 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500">
-                <FileText className="h-6 w-6 text-white" />
+            <Link href="/">
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="p-2 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500">
+                  <FileText className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-xl font-bold">NoteFlow</span>
               </div>
-              <span className="text-xl font-bold">NoteFlow</span>
-            </div>
+            </Link>
             <p className="text-gray-400 max-w-md mb-6">
               Transform your productivity with the most intuitive note-taking
               platform. Write, organize, and collaborate like never before.
@@ -36,22 +39,31 @@ export const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  className="hover:text-white transition-colors"
+                >
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#pricing"
+                  className="hover:text-white transition-colors"
+                >
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Templates
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Integrations
+                <a
+                  href="#benefits"
+                  className="hover:text-white transition-colors"
+                >
+                  Benefits
                 </a>
               </li>
             </ul>
@@ -62,22 +74,34 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/landing/about"
+                  className="hover:text-white transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/landing/blog"
+                  className="hover:text-white transition-colors"
+                >
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/landing/careers"
+                  className="hover:text-white transition-colors"
+                >
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="/landing/contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -90,18 +114,12 @@ export const Footer = () => {
             © 2024 NoteFlow. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white text-sm transition-colors"
-            >
+            <div className="cursor-pointer text-gray-400 hover:text-white text-sm transition-colors">
               Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white text-sm transition-colors"
-            >
+            </div>
+            <div className="cursor-pointer text-gray-400 hover:text-white text-sm transition-colors">
               Terms of Service
-            </a>
+            </div>
           </div>
         </div>
       </div>
